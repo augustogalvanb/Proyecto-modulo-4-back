@@ -25,8 +25,7 @@ export class User {
     city: string
     @Column({
         type: 'enum',
-        enum: Role,
-        default: Role.User,
+        enum: Role
       })
     administrator: Role
     @OneToMany(() => Order, (order) => order.user_id)
